@@ -1,0 +1,337 @@
+:root{
+     --Dark-BlueEmail: hsl(217, 28%, 15%);/*(intro and email sign up background) */
+     --Dark-BlueMain: hsl(218, 28%, 13%);/*(main-background)*/
+     --Dark-BlueFooter: hsl(216, 53%, 9%);/*(footer background)*/
+     --Dark-BlueTestimonials:hsl(219, 30%, 18%);/*(testimonials background)*/
+     --Cyan: hsl(176, 68%, 64%);/*(inside call-to-action gradient)*/
+     --Blue: hsl(198, 60%, 50%);/*(inside call-to-action gradient)*/
+     --Light-Red: hsl(0, 100%, 63%);/*(error)*/
+}
+*{
+     padding:0;
+     margin:0;
+     box-sizing: border-box;
+     color: white;
+}
+ul{
+     list-style:none;
+}
+a{
+     text-decoration: none;
+}
+button,input{
+     border:none;
+     outline: none;
+}
+html{
+     scroll-behavior: smooth;
+}
+/* header */
+header{
+     background-color: var(--Dark-BlueEmail);
+}
+header nav{
+     padding:20px;
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+}
+header img{
+     width:80px;
+}
+header ul{
+     display:flex;
+}
+header ul li{
+     padding-left:20px;
+}
+header ul li a {
+     font-size: 18px;
+     padding: 5px;
+     position: relative;
+}
+ 
+header ul li a::after {
+     content: "";
+     position: absolute;
+     width: 0;
+     height: 2px;
+     background-color: white;
+     left: 0;
+     bottom: 0;
+     transition: width 0.3s ease; 
+}
+ 
+header ul li a:hover::after {
+     width: 100%;
+}
+ 
+/* intro */
+.intro{
+     background-repeat: no-repeat;
+     background-position:bottom;
+     background-size:contain;
+     background-color: var(--Dark-BlueEmail);
+}
+.intro .container-b{
+     text-align:center;
+     display: flex;
+     flex-direction: column;
+}
+.intro .container-b img{
+     max-width:80%;
+     margin-left: auto;
+     margin-right: auto;
+}
+.intro .container-b .info{
+     margin:40px;
+}
+.intro .container-b .info h1{
+     font-size: 48px;
+     margin-bottom: 20px;
+}
+.intro .container-b .info p{
+     line-height: 1.6;
+     margin-bottom: 20px;
+}
+.intro .container-b .info button{
+     border-radius:16px;
+     font-size: 24px;
+     padding:12px 48px;
+     background:linear-gradient(var(--Blue),var(--Cyan));
+     transition: 0.3s;
+     
+}
+/* Features */
+.Features{
+     background-color:var(--Dark-BlueMain);
+}
+.Features .container-b{
+     display: grid;
+}
+.Features .container-b .Feature{
+     text-align: center;
+}
+.Features .container-b .Feature img{
+     width:120px;
+     height:120px;
+}
+.Features .container-b .Feature h3{
+     font-size:28px;
+     margin-top:20px;
+     margin-bottom:10px;
+}
+.Features .container-b .Feature p{
+     line-height:1.6;
+     margin-bottom:10px;
+}
+/* productive */
+.productive{
+     background-color:var(--Dark-BlueMain);
+}
+.productive .container-a{
+     display: flex;
+     align-items: center;
+}
+.productive .container-a img{
+     max-width: 100%;
+}
+.productive .container-a h2{
+     font-size:32px;
+     margin-bottom:20px;
+}
+.productive .container-a p{
+     margin-bottom:10px;
+     line-height:1.6;
+}
+.productive .container-a a{
+     font-size: 21px;
+     display: flex;
+     align-items:center;
+     gap:10px;
+     width:fit-content;
+     padding:5px 0;
+     color:var(--Cyan);
+     border-bottom:2px solid var(--Cyan);
+     transition:0.3s;
+}
+.productive .container-a a:hover{
+     color:white;
+     border-bottom-color:white;
+}
+/* teams */
+.teams,.signIn{
+     background-color:var(--Dark-BlueMain);
+}
+.teams .container-a{
+     display:flex;
+}
+.team{
+     padding:20px;
+     border:2px solid var(--Dark-BlueTestimonials);
+     background-color:var(--Dark-BlueTestimonials);
+     box-shadow:10px 5px 2px var(--Dark-BlueEmail);
+}
+.team .info{
+     margin:20px 0;
+     display:flex;
+     align-items: center;
+}
+.team .info img{
+     width:60px;
+     height:60px;
+     border-radius:50%;
+     margin-right:20px;
+}
+.team:first-of-type{
+     position: relative;
+}
+.team:first-of-type::before{
+     content: url("./images/bg-quotes.png");
+     width:50px;
+     height:50px;
+     position:absolute;
+     top:0;
+     left:0;
+     transform: translate(-50%,-50%);
+}
+/* signIn */
+.signIn div{
+     background-color: var(--Dark-BlueEmail);
+     margin-left:auto;
+     margin-right:auto;
+     padding:40px;
+     text-align: center;
+     border-radius:12px;
+}
+.signIn div h2{
+     font-size: 32px;
+     margin-bottom:10px;
+}
+.signIn div p{
+     margin-bottom:20px;
+}
+.signIn div input{
+     width:400px;
+     max-width:100%;
+     border-radius:16px;
+     padding:12px;
+     color:black;
+}
+.signIn div button{
+     border-radius:16px;
+     padding:12px;
+     background:linear-gradient(var(--Blue),var(--Cyan));
+}
+.signIn div button:hover{
+     background:var(--Cyan);
+}
+/* footer */
+footer{
+     background-color: var(--Dark-BlueFooter);
+     padding-top:100px;
+}
+.footer{
+     display:grid;
+     padding-top:10px;
+     align-items: start;
+}
+.footer div:first-of-type{
+     display: flex;
+     align-items: center;
+     gap:10px;
+}
+.footer div:nth-of-type(2) a{
+     display:block;
+     margin-bottom:10px;
+     align-items: center;
+}
+.footer div:nth-of-type(2) a img{
+     margin-right:5px;
+}
+.footer div:nth-of-type(3) a{
+     display:block;
+     margin-bottom:10px;
+}
+.footer div:nth-of-type(4) a{
+     display:block;
+     margin-bottom:10px;
+}
+.footer div:nth-of-type(5) img{
+     margin-right:10px;
+}
+
+@media (min-width:767px){
+     .container-a{
+          margin-left: auto;
+          margin-right: auto;
+          width:90%; 
+          padding:40px;
+     }
+     .container-b{
+          margin-left: auto;
+          margin-right: auto;
+          width:80%; 
+          padding:40px;
+     }
+     .intro{
+          background-image:url("./images/bg-curvy-desktop.svg");
+     }
+     .Features .container-b{
+          grid-template-columns:1fr 1fr;
+          gap:50px;
+     }
+     .productive .container-a{
+          gap:60px;
+     }
+     .teams .container-a{
+          justify-content:space-between;
+          gap:30px;
+     }
+     .signIn div{
+          transform: translateY(50%);
+          width:70%;
+     }
+     .signIn div input{
+          margin-right:20px;
+     }
+     .footer{
+          grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+     }
+}
+@media (max-width:766px){
+     .container-a,.container-b{
+          margin-left: auto;
+          margin-right: auto;
+          width:100%; 
+          padding:30px;
+     }
+     .intro{
+          background-image:url("./images/bg-curvy-mobile.svg");
+     }
+     .Features .container-b{
+          grid-template-columns:1fr;
+          gap:20px;
+     }
+     .productive .container-a{
+          flex-direction:column;
+          gap:40px;
+     }
+     .teams .container-a{
+          flex-direction:column;
+          gap:20px;
+     }
+     .signIn div{
+          width:90%;
+          transform: translateY(20%);
+     }
+     .signIn div input{
+          margin-bottom:10px;
+     }
+     .signIn div button{
+          width:100%;
+     }
+     .footer div{
+          margin-bottom:10px;
+     }
+}
